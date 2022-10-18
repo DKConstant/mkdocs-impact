@@ -1,0 +1,54 @@
+[data-md-toggle=search]:checked~.md-header .md-header__option {
+  opacity: 1;
+  max-width: 100%;
+}
+
+.header-404 .md-header__option {
+  margin-left: auto;
+}
+
+.md-main .md-content__inner {
+  text-align: center;
+  margin: 30px 0 80px;
+}
+
+.body {
+  font-size: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.hero-wrapper-404 {
+  background: linear-gradient(#0055b2, #0057b4,#035cc2,#0154b3,#005cb9);
+  text-align: center;
+}
+
+.hero-404 {
+  max-width: 550px;
+}
+
+.popular-topics {
+  margin: auto;
+}
+
+.popular-topics .links{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+.popular-topics .links > p {
+  width: 33.3%;
+  text-align: center;
+}
+
+.popular-topics .links p {
+  padding: 5px 20px 10px 0;
+  min-width: 180px;
+}
+.popular-topics .links a {
+  color: #00B7C3;
+}

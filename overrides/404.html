@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% block extrahead %}
+{{ super() }}
+<link rel="stylesheet" href="{{ 'css/404.css' | url }}" >
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script src="{{ 'js/custom_search.js' | url }}"></script>
+{% endblock %}
+{% block header %}
+  {% include "partials/home-header.html" %}
+{% endblock %}
+
+{% block hero%}
+  <div class="hero-wrapper-404">
+    <img class="hero-404" src="{{ 'images/404_hero.gif' | url }}">
+  </div>
+{% endblock %}
+
+{% block site_nav %}
+{% endblock %}
+
+{% block content %}
+  <div class="page-404">
+    <h1 class="title">Looks like this page doesn't exist.</h1>
+    <p class="body">Try searching or browsing our popular topics to find what you're looking for.</p>
+    <div class="custom-search">
+      {% include "partials/search.html" %}
+    </div>
+
+    <div class="popular-topics">
+      <h4>Popular Topics</h4>
+      <div class="links">
+        <p><a href="/start/get-started.html">Get started</a></p>
+        <p><a href="/start/gain-access.html">Gain access</a></p>
+        <p><a href="/dashboards/start.html">Dashboards</a></p>
+        <p><a href="/smartview/smartview.html">Smart View</a></p>
+        <p><a href="/actions/start.html">Action service</a></p>
+        <p><a href="/anomaly/background.html">Anomaly detection</a></p>
+        <p><a href="/access/data-access.html">Data Access</a></p>
+        <p><a href="/streaming/start.html">Streaming data</a></p>
+        <p><a href="/api/zenoss-api.html">Zenoss API</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

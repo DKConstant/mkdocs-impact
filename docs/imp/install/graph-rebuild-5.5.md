@@ -1,0 +1,116 @@
+# Rebuilding the graph database during 5.5.x upgrades
+
+Use this procedure after updating Service Impact **from version 5.5.0 CA or 5.5.x to 5.5.5
+** . If you are updating from a different release, use a
+different procedure. For more information, see [Installing or updating Service Impact](/imp/install/installation-procedures.html).
+
+!!! warning
+    The rebuild process can take a long time. Perform this procedure during
+    a maintenance window.
+
+Perform these steps:
+
+1.
+
+    Log in to the Control Center master host as root or as a user with
+    superuser privileges.
+
+2.   Stop the Zenoss services, and then verify that the services are
+    stopped.
+    1.   Stop Resource Manager.
+
+        ```sh
+        serviced service stop Zenoss.resmgr/Zenoss
+        ```
+
+    2.   Wait until all services are stopped.
+        Use the `watch` command to
+        monitor the status.
+
+        ```sh
+        watch serviced service status Zenoss.resmgr/Zenoss
+        ```
+
+3.  Start the Zenoss service that is needed to perform the graph
+    rebuild.
+    1.  Start the zeneventserver service.
+
+        ```sh
+        serviced service start zeneventserver
+        ```
+
+    2.  Wait until the service is started.
+        Use the watch command to monitor the status.
+
+        ```sh
+        watch serviced service status zeneventserver
+        ```
+
+4.  Identify the delegate hosts where Resource Manager is running.
+
+    ```sh
+    serviced host list --show-fields=Pool,Name
+    ```
+
+    The name of the resource pool where Resource Manager is running is
+    not standardized.
+
+5.  Log in to a delegate host, and then start a Zope container.
+
+    !!! warning
+        The rebuild process requires approximately 1GB to 2GB per CPU core.
+        If the delegate host does not have adequate main memory, the host
+        may become unstable.
+
+    1.  Log in to a delegate host in the Resource Manager pool as root
+        or as a user with `serviced` CLI privileges.
+
+    2.  Start a Zope container on the host.
+
+        ```sh
+        serviced service shell zope
+        ```
+
+    3.  In the container, log in as user zenoss.
+
+        ```sh
+        su - zenoss
+        ```
+
+6.  Update the catalog and then initialize the server.
+    1.  Update the catalog.
+
+        ```sh
+        zenimpactgraph run -x catclean
+        ```
+
+    2.  Update the Service Impact graph in ZODB and
+        [Neo4j](http://neo4j.com/){.external-link}.
+
+        ```sh
+        zenimpactgraph run --update
+        ```
+
+        For more information about the update process, see [Graph update tips](/imp/install/graph-update-tips.html).
+
+    3.  Exit the zenoss user account.
+
+        ```sh
+        exit
+        ```
+
+    4.  Exit the Zope container.
+
+        ```sh
+        exit
+        ```
+
+7.  Restart all Zenoss services:
+
+    ```sh
+    serviced service restart Zenoss.resmgr/Zenoss
+    ```
+
+8.  Refresh the cache in your browser. The procedure varies by browser.
+
+

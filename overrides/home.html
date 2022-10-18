@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block site_nav %}{% endblock %}
+{% block extrahead %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'css/home.css' | url }}" >
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'js/custom_search.js' | url }}"></script>
+{% endblock %}
+{% block header %}
+  {% include "partials/home-header.html" %}
+{% endblock %}
+{% block content %}
+  <div class="homepage-title">
+    <h1 id="zenoss-cloud-documentation">Zenoss Cloud Documentation</h1>
+  </div>
+  <div class="custom-search">
+    {% include "partials/search.html" %}
+  </div>
+<!-- Edit button -->
+{% if page.edit_url %}
+<a
+        href="{{ page.edit_url }}"
+        title="{{ lang.t('edit.link.title') }}"
+        class="md-content__button md-icon"
+>
+  {% include ".icons/material/pencil.svg" %}
+</a>
+{% endif %}
+
+<!-- Markdown content -->
+{{ page.content }}
+
+<!-- Last update of source file -->
+{% if page and page.meta %}
+{% if page.meta.git_revision_date_localized or
+page.meta.revision_date
+%}
+{% include "partials/source-file.html" %}
+{% endif %}
+{% endif %}
+{% endblock %}

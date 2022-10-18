@@ -1,0 +1,161 @@
+# Thumbnail glossary definitions used by the pymdownx_zenoss.glossary MkDocs extension.
+#
+# Every term from the glossary Markdown file should be present here.
+# 
+# Terms should contain only lowercase letters and dash characters, and be in
+# the singular form. A definition can span multiple lines as long as the lines
+# are indented consistently. Definitions should be in plain text.
+
+action:
+    The process of sending a one-way message (notification) to a receiving
+    application.
+
+action service:
+    The service that sends one-way messages (notifications) when it finds
+    changes in your environment.
+
+anchor-card:
+    The primary area of a Smart View page.
+
+anchor-entity:
+    The primary subject of a Smart View, shown in the anchor card.
+
+api-client:
+    A named object for managing authentication keys for 
+    Zenoss API clients.
+
+collection-zone:
+    A set of collectors and an interface for managing devices.
+
+collector:
+    A named group of Collection Zone services that gather availability,
+    performance, or model data about devices.
+
+dashboard:
+    A grid of tiles that displays key indicators of a set of entities
+    over a range of time.
+
+dashboard-scope:
+    The set of entities a dashboard includes, defined by a query.
+    The query combines sources of data with optional filters.
+
+dashboard-tile:
+    A customizable visualization of one or more key performance or
+    availability indicators.
+
+data-source:
+    (Collection Zone) A query that uses a specific protocol to request
+    one or more metrics from a device or application.
+
+destination:
+    The target of an action; the receiving application
+    of a notification.
+
+device:
+    (Collection Zone) A physical or virtual system, or local or cloud 
+    infrastructure, from which a Collection Zone gathers availability, 
+    performance, and model data.
+
+device-class:
+    (Collection Zone) The base set of properties that characterize a 
+    group of devices. A device may belong to only one device class.
+
+device-component:
+    (Collection Zone) Resources that belong to a specific device or 
+    processes that run on a specific device.
+
+dimension-attribute:
+    (Streaming data) An entity attribute that contributes to uniquely
+    identifying an entity.
+
+discovery:
+    (Collection Zone) The process of identifying device components.
+
+entity:
+    An object that represents any discrete system, process or feature
+    for which Zenoss Cloud gathers or is sent time series data.
+
+event:
+    A structured message that is sent to the event processing service.
+
+event-class:
+    (Collection Zone) A named set of properties that define a category
+    of events, and a set of event rules.
+
+event-rule:
+    (Collection Zone) A Python expression that the event processing 
+    service uses to determine whether to change the class of an event.
+
+graph:
+    A diagram of the relationships among data points, thresholds, or
+    both, over a specific period of time.
+
+key-metric:
+    A metric that is modeled by the anomaly detection service.
+
+metadata:
+    One or more properties associated with an entity, metric, or event.
+
+metadata-attribute:
+    (Streaming data) Any entity attribute that is not a dimension
+    attribute.
+
+metric:
+    A measurement that quantifies an entity property or phenomenon.
+
+model:
+    The determinate characteristics of an entity, including its
+    relationships with other entities, if any.
+
+monitoring-template:
+    (Collection Zone) A named object that associates data sources, thresholds, and graph
+    definitions with a device or device component. For devices, a monitoring
+    template also includes a device class.
+
+notification:
+    A one-way message. 
+
+organizer:
+    An implicit or explicit way to group devices.
+
+primary-metric-tile:
+    (Smart View) The first metric tile on an anchor card.
+
+related-entity:
+    An entity that has a dependency relationship with another entity.
+
+rule:
+    A combination of one or more triggers, one or more destinations,
+    and a customized message.
+
+scope:
+    A query that defines the set of entities that a dashboard includes.
+    The query combines sources of data with optional filters.
+
+series:
+    One or more data points in a specific time range; typically, metric
+    data points.
+
+smart-view:
+    An AI-assisted tool for investigating the root cause of
+    infrastructure or application issues, whether minutes or months past.
+
+smart-view-tile:
+    A visualization in Smart View of an entity, events, or the data
+    points of a metric.
+
+streaming-data:
+    Entity, metric, or event data that is sent to Zenoss Cloud without a Collection Zone.
+
+threshold:
+    (Collection Zone) A named object that specifies the boundary value 
+    and comparison operator for the data points of a metric.
+
+tile:
+    A rectangular area of a Smart View or dashboard.
+
+trigger:
+    A set of criteria that identify conditions in your environment.
+
+view:
+    A virtual table defined by one or more queries.
