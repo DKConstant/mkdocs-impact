@@ -1,5 +1,16 @@
 # Internet connections
 
+The following procedures will create service models of the redundant paths to the internet.
+
+## Logical node (internet connection)
+
+All network connections except the connection to the Internet are
+modeled. Because the Internet connection is not modeled in Resource
+Manager, we create a logical node to represent it. For this tutorial,
+the logical node is simply a service model member that reacts to fake
+events. A "real" logical node could be configured to react to events
+from a zencommand that pings an Internet resource.
+
 Follow these steps:
 
 1.   In the Resource Manager browser interface, select SERVICES &gt;
@@ -18,9 +29,8 @@ Follow these steps:
 6.   In the example.com details view, enter values to match the
     following table, and then click Save.
 
-    |                                          |                                                         |
-    |:-----------------------------------------|:--------------------------------------------------------|
     | Field                                    | Description                                             |
+    |:-----------------------------------------|:--------------------------------------------------------|
     |  Description                             | A node to help represent a route to the Internet.       |
     |  Criteria                                | all, Summary, contains, fakeInternet                    |
     |  Events for this node in this event class| /Status/Ping                                            |
@@ -28,7 +38,7 @@ Follow these steps:
 
 
 
-# Internet connections 2
+## Router 12 to logical node
 
 Create a service model member for the connection from router 12 to the
 zenoss.com logical node.
@@ -57,7 +67,7 @@ zenoss.com logical node.
 9.   From the search results list, select example.com, and then click
     ADD  &gt; CLOSE.
 
-# Internet connections 3
+## Router 23 to logical node
 
 To create the service model member for the connection through router 23,
 clone the member for the connection through router 12.
@@ -85,7 +95,7 @@ clone the member for the connection through router 12.
 9.   In the results list, double-click fake-txrt23-100g-0, and then
     click ADD  &gt; CLOSE.
 
-# Internet connections 4
+## Combined internet connections
 
 The previous tasks created subservices to represent the WAN connections
 to the Internet. This task creates a subservice member in the service
@@ -101,7 +111,7 @@ model to represent the redundant WAN tier.
 7.   In the results list, select txrt12-Internet and txrt23-Internet,
     and then click ADD  &gt; CLOSE.
 
-# Internet connections 5
+## Adjust policy
 
 Add a global availability policy to the Internet connection subservice
 member.

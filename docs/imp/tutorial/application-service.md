@@ -18,11 +18,9 @@ can be modeled.
     -   CRM - Compute Service
     -   CRM - Network Service
 
-    To view the graph of the service model, select the new service in
-    the tree view, and then select Impact View. After hiding child
-    nodes and zooming in, the graph looks similar to the following
-    image. If necessary, to reposition the graph, click and drag it.
+To view the graph of the service model, select the new service in the tree
+view, and then select Impact View. After hiding child nodes and zooming in,
+the graph looks similar to the following image. If necessary, to reposition
+the graph, click and drag it.
 
-    @lb[](img/application-service-crm-svc-all.png)
-
-
+  @lb[](img/application-service-crm-svc-all.png)

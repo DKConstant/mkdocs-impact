@@ -27,7 +27,7 @@ events to the fake devices.
     zensendevent -d fake-txap16-nic-0 -c /Status/Ping -s Critical "Impact Tutorial - fake device is DOWN"
     ```
 
-5.   In the browser, click Refresh.
+5.  In the browser, click Refresh.
 
     The Impact View shows that the CRM application availability state
     changed to ATRISK, and the nodes involved in the state change are
@@ -35,7 +35,7 @@ events to the fake devices.
 
     To see all nodes in the Service Impact graph, click Expand All.
 
-6.   Change the view to Impact Events, and then in the Impact Events
+6.  Change the view to Impact Events, and then in the Impact Events
     list, click CRM - Development Service.
 
     @lb[](img/test-service-crm-impact-events.png)
@@ -44,7 +44,7 @@ events to the fake devices.
     Impact performs (the Confidence column). To view the impact chain of
     an event, click the plus button in the left column.
 
-7.   Send ping down events to the fake network interface card components
+7.  Send ping down events to the fake network interface card components
     in the txdb27 and txdb28 hosts, and then click Refresh.
 
     ```sh
@@ -67,4 +67,58 @@ events to the fake devices.
     zensendevent -d fake-txdb28-nic-0 -c /Status/Ping -s Clear "Impact Tutorial - fake device is UP"
     ```
 
+## Alternate steps for GUI-only access
 
+1. In the tree view, open the Dashboard organizer, and then select CRM - Development Service.
+
+2. In the main view area, select Impact View.
+
+3. In a second browser tab or window, navigate to the Event Console (Events > Event Console).
+
+4. Using the Add Event button, send ping down events to the fake network interface card components in the txap15 and txap16 hosts.  
+
+  |Device|Event Class|Severity|Summary|
+  |------|-----------|--------|-------|
+  |fake-txap15-nic-0|/Status/Ping|Critical|"Impact Tutorial - fake device is DOWN"|
+  |fake-txap15-nic-1|/Status/Ping|Critical|"Impact Tutorial - fake device is DOWN"|
+  |fake-txap16-nic-0|/Status/Ping|Critical|"Impact Tutorial - fake device is DOWN"|
+
+5. In the browser, click Refresh.
+
+    The Impact View shows that the CRM application availability state
+    changed to ATRISK, and the nodes involved in the state change are
+    highlighted with yellow and red.
+
+    To see all nodes in the Service Impact graph, click Expand All.
+
+6.  Change the view to Impact Events, and then in the Impact Events
+    list, click CRM - Development Service.
+
+    @lb[](img/test-service-crm-impact-events.png)
+    The events that contribute to the current state of the CRM
+    application are weighted by the root-cause analysis that Service
+    Impact performs (the Confidence column). To view the impact chain of
+    an event, click the plus button in the left column.
+
+7.  Send ping down events to the fake network interface card components
+    in the txdb27 and txdb28 hosts, and then click Refresh.
+
+    |Device|Event Class|Severity|Summary|
+    |------|-----------|--------|-------|
+    |fake-txdb27-nic-0|/Status/Ping|Critical|"Impact Tutorial - fake device is DOWN"|
+    |fake-txdb27-nic-1|/Status/Ping|Critical|"Impact Tutorial - fake device is DOWN"|
+    |fake-txdb28-nic-0|/Status/Ping|Critical|"Impact Tutorial - fake device is DOWN"|
+
+    The list of contributing events grows, and the rankings change to
+    reflect the added events.
+
+8.  Send clear events to all fake devices that are down.
+
+    |Device|Event Class|Severity|Summary|
+    |------|-----------|--------|-------|
+    |fake-txap15-nic-0|/Status/Ping|Clear|"Impact Tutorial - fake device is UP"|
+    |fake-txap15-nic-1|/Status/Ping|Clear|"Impact Tutorial - fake device is UP"|
+    |fake-txap16-nic-0|/Status/Ping|Clear|"Impact Tutorial - fake device is UP"|
+    |fake-txdb27-nic-0|/Status/Ping|Clear|"Impact Tutorial - fake device is UP"|
+    |fake-txdb27-nic-1|/Status/Ping|Clear|"Impact Tutorial - fake device is UP"|
+    |fake-txdb28-nic-0|/Status/Ping|Clear|"Impact Tutorial - fake device is UP"|

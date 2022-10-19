@@ -12,9 +12,8 @@ segments.
 
     The following table shows new and existing members.
 
-    |                          |                                          |
-    |:-------------------------|:-----------------------------------------|
     | New service model member | Existing service model members           |
+    |:-------------------------|:-----------------------------------------|
     | App Hosts - Switches     | txsw235 - App Hosts, txsw172 - App Hosts |
     | DB Hosts - Switches      | txsw235 - DB Hosts, txsw172 - DB Hosts   |
     | Firewalls - Routers      | txfw25 - Routers, txfw17 - Routers       |
@@ -27,7 +26,7 @@ segments.
     -   ATRISK if &gt;= 50% DynamicService is DOWN
     -   DOWN if &gt;= 100% DynamicService is DOWN
 
-# Local networks 2
+## Merge the network segment services
 
 Service model members for all of the major network segments are in
 place. Now consider members to represent the critical paths. To
@@ -58,9 +57,8 @@ paths require an additional subservice each:
     new service model members is the default policy. The following table
     matches new and existing service model members.
 
-    |                          |                                                                 |
-    |:-------------------------|:----------------------------------------------------------------|
     | New service model member | Existing service model members                                  |
+    |:-------------------------|:----------------------------------------------------------------|
     | Routers - App Hosts      | App Hosts - Switches, Firewalls - Routers, Switches - Firewalls |
     | App Hosts - DB Hosts     | App Hosts - Switches, DB Hosts - Switches                       |
 

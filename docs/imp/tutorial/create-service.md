@@ -1,18 +1,11 @@
 # Create the service
 
-All network connections except the connection to the Internet are
-modeled. Because the Internet connection is not modeled in Resource
-Manager, we create a logical node to represent it. For this tutorial,
-the logical node is simply a service model member that reacts to fake
-events. A "real" logical node could be configured to react to events
-from a zencommand that pings an Internet resource.
+The CRM application service we will be creating will depend on multiple subservices.
+The subservices may contain additional subservices, so the following procedures should be completed in the listed order.
 
--   [Create logical node](/imp/tutorial/internet.html)
--   [Create a subservice member for one Internet connection](/imp/tutorial/internet2.html)
--   [Create a subservice member for the other Internet connection](/imp/tutorial/internet3.html)
--   [Create service member to represent redundant paths to the Internet](/imp/tutorial/internet4.html)
--   [Add a policy to the Internet connection member](/imp/tutorial/internet5.html)
+1. [Create a subservice simulating the connection to the Internet](/imp/tutorial/internet.html)
+2. [Create a subservice simulating the local network](/imp/tutorial/local-networks.html)
+3. [Create a subservice combining the Internet and local network services](/imp/tutorial/network-service.html)
+4. [Create the final application service combining the previous services](/imp/tutorial/application-service.html)
 
 </p>
-
-
