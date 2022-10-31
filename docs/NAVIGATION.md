@@ -28,6 +28,7 @@
             * [From 5.1.x - 5.3.x](imp/install/upgrade/51x-53x/procedure.md)
                 * [Prepare to update](imp/install/upgrade/51x-53x/upgrade.md)
                 * [Download and stage packages](imp/install/upgrade/51x-53x/pre-upgrade-download-intermediate.md)
+                * [Update both ZenPacks](imp/install/upgrade/51x-53x/upgrade-zenpacks.md)
                 * [Export all dynamic services](imp/install/upgrade/51x-53x/pre-upgrade-export.md)
                 * [Download and stage 5.5.x packages](imp/install/upgrade/51x-53x/pre-upgrade-download.md)
                 * [Remove the intermediate version](imp/install/upgrade/51x-53x/removing.md)
