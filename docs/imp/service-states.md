@@ -92,9 +92,8 @@ When a service's availability or performance state changes, Service
 Impact sends an event to Resource Manager. The following table
 summarizes the default policies for negative state changes:
 
-|                    |                                                              |               |                |
-|--------------------|--------------------------------------------------------------|---------------|----------------|
 | Service state type | Event class                                                  | Service state | Event severity |
+|--------------------|--------------------------------------------------------------|---------------|----------------|
 | Availability       | `/Service/State/Availability`                 | Down          | Critical       |
 |                    |                                                              | Degraded      | Error          |
 |                    |                                                              | At Risk       | Warning        |
@@ -105,5 +104,3 @@ You can use the [triggers and notifications](/not-migrated.html)
 feature of Resource Manager to let someone know that a service has
 changed state, to create a service desk ticket, or to generate an
 automated response.
-
-

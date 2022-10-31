@@ -94,3 +94,7 @@ ZenPack files for installation.
         ```sh
         yes | ./install-zenoss-impact_*.run
         ```
+
+[ Like ](/not-migrated.html){.like-button}
+
+

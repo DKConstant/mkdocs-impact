@@ -94,7 +94,7 @@ Decommissioned</p></th>
 
 For more information about production states, see [Production states and maintenance windows](/not-migrated.html).
 
-# Configuring the production state propagation threshold
+## Configuring the production state propagation threshold
 
 The default value of the Service Impact production state propagation
 threshold is Production. You can select a different production state for

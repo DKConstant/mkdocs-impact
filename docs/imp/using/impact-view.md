@@ -102,6 +102,20 @@ area.
 To display the following Impact View menu options, position the pointer
 in the primary view area and right-click.
 
+|Menu option|Description|
+|-----------|-----------|
+|Fit Graph to Window|Adjust the size of the graph so that its dimensions match the display area.|
+|Show All|Display all nodes in the graph, including those that are automatically added by ZenPacks.|
+|Collapse All|Display only the top-level node of the graph.|
+|Compact View|Display only the service model members that you have manually added and the immediate children of a service or service group.|
+|Toggle Rainbows|Display colored tabs at the right edge of the node, indicating the number of critical, error, and warning events associated with the node.|
+|Show Filters|Hide or display the filter controls. <br><br> Use filter check boxes to select availability and performance states by which to filter. By default, all states are selected for filtering. To restrict displayed nodes to specific states, such as DOWN and UNACCEPTABLE, select only those check boxes. (Changes to the selected states apply to all dynamic services because state is a global feature.)<br><br>To filter by complete or partial node name, use the Name field. To perform the filter click Filter.|
+|Export Graph Image|Creates a file of the graph image with the default name graph.png and downloads it to your workstation.|
+|Enable center view|Shift the graph so that the selected node is in the center. The zoom level does not change. You can zoom in and out on the node in the center of the graph. Choose this option to recenter a specific node.|
+|Jump to Selected|Shift the graph so that the node that is shown in the Selected Node field is in the center.|
+|Jump to Context (root)|Shift the graph so that the service context (root) node of the graph is in the center.|
+
+<!---  //Commenting out the old layout in favor of a toble.//
 Fit Graph to Window
 
 Adjust the size of the graph so that its dimensions match the display
@@ -159,8 +173,9 @@ Jump to Context (root)
 
 Shift the graph so that the service context (root) node of the graph is
 in the center.
+-->
 
-# Impact view2
+## Node tiles
 
 The node tile graphically represents a server or service node and
 information about it, as described in the following table:
@@ -208,7 +223,7 @@ information about it, as described in the following table:
 </tbody>
 </table>
 
-# Impact view 3
+## Impact Policies dialog box
 
 In the Impact Policies dialog box, add or edit state triggers for
 contextual or global policies.  Note, Impact Policies for Availability
@@ -227,7 +242,7 @@ does not contain the option to edit the custom state provider.
 For a policy or custom state provider, click Add or Edit to access
 options.
 
-# Impact view 4
+## Edit policy options (Availability)
 
 Use the Edit Policy options to add or edit state triggers for contextual
 or global policies.
@@ -238,15 +253,14 @@ To add a trigger, in the lower-left corner click Add. On the right side
 of the dialog box, modify the trigger fields (described in the following
 table), and then click Save Changes.
 
-|                  |                                                                                                                 |
-|:-----------------|:----------------------------------------------------------------------------------------------------------------|
 | Field            | Description                                                                                                     |
+|:-----------------|:----------------------------------------------------------------------------------------------------------------|
 |  My state will be| The new state, if the trigger applies. Possible states: DOWN, DEGRADED, ATRISK, UP.                             |
 |  If              | The conditions that trigger a state change. To specify a percentage rather than an absolute value, click % .    |
 |  Of type         | Restrict the type of child node to which the trigger applies. Types other than Any are exclusive.               |
 |  Are             | The state of child nodes that cause an evaluation of this trigger. Possible states: DOWN, DEGRADED, ATRISK, UP. |
 
-# Impact view 5
+## Edit policy options (Performance)
 
 Use the Edit Policy options to add or edit state triggers for contextual
 or global policies.
@@ -257,15 +271,14 @@ To add a trigger, in the lower-left corner click Add. On the right side
 of the dialog box, modify the trigger fields (described in the following
 table), and then click Save Changes.
 
-|                  |                                                                                                                          |
-|:-----------------|:-------------------------------------------------------------------------------------------------------------------------|
 | Field            | Description                                                                                                              |
+|:-----------------|:-------------------------------------------------------------------------------------------------------------------------|
 |  My state will be| The new state, if the trigger applies. Possible states: UNACCEPTABLE, DEGRADED, ACCEPTABLE.                              |
 |  If              | The conditions that trigger a state change. To specify a percentage rather than an absolute value, click % .             |
 |  Of type         | Restrict the type of child node to which the trigger applies. Types other than Any are exclusive.                        |
 |  Are             | The state of child nodes that cause an evaluation of this trigger. Possible states: UNACCEPTABLE, DEGRADED, ACCEPTABLE. |
 
-# Impact view 6
+## Edit Custom State Provider options
 
 Use a custom state provider to add state triggers (rules) for custom
 device and component service model members. You can customize Resource

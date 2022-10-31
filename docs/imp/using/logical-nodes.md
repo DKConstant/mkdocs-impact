@@ -43,6 +43,13 @@ event class or subclass that is associated with the trigger.
 
 The following examples illustrate how to specify event classes.
 
+|Event class search string|Description|
+|-------------------------|-----------|
+|`/Status`|Only the `/Status` event class.|
+|`/Status/`|The `/Status` event class and all of its subclasses.|
+|`/Status/Web`|Only the `/Web` subclass of `/Status`|
+
+<!---  //Converted indented list to table.//
     /Status
 
 Only the /Status class.
@@ -55,12 +62,12 @@ Only the Web subclass of /Status
 
 The /Status class and all of its subclasses.
 
-In the "will result in these availability states" field, map event
-severity levels to availability states.
+--->
+
+In the "will result in these availability states" field, map one or more
+of the available event severity levels to availability states (UP, AT RISK, DEGRADED, or DOWN).
 
 ## Performance State
 
 The fields and options in this area differ only in that the mapping of
-event severity levels to performance states uses different states.
-
-
+event severity levels to performance states uses different states (ACCEPTABLE, DEGRADED, or UNACCEPTABLE).

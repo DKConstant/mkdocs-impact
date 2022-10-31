@@ -94,7 +94,7 @@ reconcile the same entries each time. You can also manually adjust
 committed service model definitions later in the target system by using
 the browser interface.
 
-# Attempting to reconcile
+## Attempting to reconcile
 
 Prerequisites:
 
@@ -134,7 +134,7 @@ zenimpactimport -h
     -   If the import ends in an error or you do not plan to commit the
         import, proceed with [Canceling the service model reconcile](/imp/install/reconciling3.html).
 
-# Canceling the service model reconcile
+## Canceling the service model reconcile
 
 You might need to remove an uncommitted import attempt from the target
 system sandbox and free up sandbox resources.

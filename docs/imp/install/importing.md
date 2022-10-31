@@ -29,7 +29,7 @@ content or structure.
 
 </p>
 
-# Preparing to import
+## Preparing to import
 
 Before you can import, you must copy the export file from your
 workstation to the target system master host and connect to that master
@@ -94,7 +94,7 @@ Prerequisite: Generate an export file (see [Exporting a service model](/imp/inst
 
 Proceed with the initial import.
 
-# Initiating the import
+## Initiating the import
 
 In the initial import, service models from the exported file are
 imported into the sandbox, the product attempts to reconcile service

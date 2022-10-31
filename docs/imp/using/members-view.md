@@ -34,7 +34,7 @@ The list tools add or remove members from a service model.
 </tbody>
 </table>
 
-# Add to Service dialog box
+## Add to Service dialog box
 
 Use the Add to Service dialog box to find and add members to a service
 model.

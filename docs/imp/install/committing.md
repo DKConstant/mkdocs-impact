@@ -11,10 +11,10 @@ interface.
 Prerequisites:
 
 -   Generate an export file (see [Exporting a service model](/imp/install/exporting.html)).
--   Copy the export file and log in to the target system (see [Preparing to import](/imp/install/importing2.html)).
--   Complete the initial import (see [Initiating the import](/imp/install/importing3.html)).
+-   Copy the export file and log in to the target system (see [Preparing to import](/imp/install/importing.html)).
+-   Complete the initial import (see [Initiating the import](/imp/install/importing.html)).
 -   Reconcile devices or components from the originating system with
-    their equivalents in the target system (see [Attempting to reconcile](/imp/install/reconciling2.html)).
+    their equivalents in the target system (see [Attempting to reconcile](/imp/install/reconciling.html)).
 -   Review the following considerations:
     -   It is possible to commit the file with UNRECONCILED nodes,
         however, those members are lost from the resulting service
@@ -64,7 +64,7 @@ zenimpactimport --import-version  versionID  --commit
 zenimpactimport --source  sourceID --import-version  versionID  --commit
 ```
 
-# Future export scenarios and machine learning
+## Future export scenarios and machine learning
 
 In the future, service models for dynamic services that you import might
 reference the same service model members that required manual reconcile
@@ -77,13 +77,13 @@ production environment, the imported service model must be reconciled to
 map to the shared device A, and to equivalent devices X and Y instead of
 B and C.
 
-#### Initial import of service model "S" into production
+### Initial import of service model "S" into production
 
 After the initial import, B and C were UNRECONCILED. You created MAP
 actions to reconcile B to X and C to Y, and then committed with
 svc_export.graphml .latest.txt.
 
-#### Import 2 of service model "S" to the same production system
+### Import 2 of service model "S" to the same production system
 
 A few weeks later, an upgrade to service model "S" adds device "D." The
 changed service model "S" with devices A,B, C, D is imported into
@@ -95,7 +95,7 @@ Manager learned and automatically mapped B and C to X and Y. This time,
 you only need to manually add a MAP action for "D" to "Z", and then
 commit.
 
-#### Import 3: initial import of the service model for dynamic service "T"
+### Import 3: initial import of the service model for dynamic service "T"
 
 A third import occurs into production for a different service, "T."
 Service model "T" contains devices A and D. After the import and
@@ -105,7 +105,7 @@ knowledge from your previous mapping of device D to Z for a different
 service import. In production, service model "T" contain devices A and
 Z.
 
-#### Import 4: service model "T" with a different mapping of an entity than in "S" service context
+### Import 4: service model "T" with a different mapping of an entity than in "S" service context
 
 A fourth import occurs, this time of service model "T" with service
 model members A, B, D. However, in the context of service "T," device B
