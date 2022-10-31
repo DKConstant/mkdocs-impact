@@ -34,7 +34,7 @@ Additional highlights of this release:
 ## Compatibility
 
 For version information, please see the compatibility matrix on the
-[Release Notes](/not-migrated.html)
+[Release Notes](/imp/install/release-notes.html)
 page.
 
 ## Update instructions
@@ -101,5 +101,3 @@ IMP-689</td>
 </tr>
 </tbody>
 </table>
-
-

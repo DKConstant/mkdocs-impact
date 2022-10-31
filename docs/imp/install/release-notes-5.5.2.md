@@ -5,7 +5,7 @@ The primary focus of this release is improving the graph update process.
 ## Compatibility
 
 For version information, please see the compatibility matrix on the
-[Release Notes](/not-migrated.html)
+[Release Notes](/imp/install/release-notes.html)
 page.
 
 ## Update instructions
@@ -42,7 +42,8 @@ Both update paths start at [the same page](/imp/install/installation-procedures.
     `ModelCatalogError: Exception performing search`. The
     workaround is to re-run the update.
 -   After installing one or more ZenPacks that have updated relationship
-    providers, rebuild the graph. For more information, see [Rebuilding the graph database during 5.4.x upgrades](/imp/install/graph-rebuild-5.4.html).
+    providers, rebuild the graph. For more information, see
+    [Rebuilding the graph database during 5.5.x upgrades](/imp/install/upgrade/55x/graph-rebuild-5.5.html).
 -   (IMP-836) After a metatype configuration change,  related service events are not
     cleared. To work around the issue, remove and then re-add the
     dynamic service.
@@ -90,5 +91,3 @@ IMP-833 </td>
 </tr>
 </tbody>
 </table>
-
-

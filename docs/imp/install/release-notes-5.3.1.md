@@ -49,7 +49,8 @@ credentials to log in.
 ## Compatibility
 
 For version information, please see the compatibility matrix on the
-[Release Notes](/imp/install/release-notes.html) page.
+[Release Notes](/imp/install/release-notes.html)
+page.
 
 ## Fixed issues
 
@@ -74,7 +75,7 @@ For version information, please see the compatibility matrix on the
 
 ## Considerations and workarounds
 
-## Reidentifying devices
+### Reidentifying devices
 
 Resource Manager provides the ability to reidentify devices. The
 reidentification process deletes and re-adds the device with a new ID
@@ -82,7 +83,7 @@ and GUID. When the GUID is changed, the device is removed from that
 particular Service Impact service. If you reidentify a device, you must
 manually re-add the device to the service model.
 
-## Impact graph update best practices
+### Impact graph update best practices
 
 Graph updates and maintenance window operations use the same target
 graph database. Concurrent access of shared data increases time required
@@ -97,14 +98,14 @@ performance when updating an impact graph,
 
 For more information, see [Manually rebuilding an impact graph](/imp/holding/targeted-graph-update3.html).
 
-## Upgrade considerations
+### Upgrade considerations
 
 When you initially upgrade from Service Impact 5.2.3 to 5.3.1, the new
 version of the product removes accumulated event history that is no
 longer needed. A temporary performance slowdown might occur while nodes
 are read.
 
-## Limitations
+### Limitations
 
 After Service Impact is installed, Service Impact and Resource Manager
 are interdependent. However, Resource Manager issues affect Service
@@ -113,5 +114,3 @@ Manager. For this reason, the list of known issues for a given Service
 Impact release might include items that manifest in Service Impact but
 are not caused by Service Impact software. Such items are noted in the
 list of known issues.
-
-

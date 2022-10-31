@@ -38,7 +38,7 @@ Additional highlights of this release:
 ## Compatibility
 
 For version information, please see the compatibility matrix on the
-[Release Notes](/not-migrated.html)
+[Release Notes](/imp/install/release-notes.html)
 page.
 
 ## Update instructions
@@ -48,7 +48,8 @@ page.
 The update procedures for this release are unique and a special section
 has been created for them:
 
-[Updating Service Impact](/imp/install/installation-procedures.html)
+[Updating Service Impact](/imp/install/upgrade/51x-53x/procedure.html)
+
 
 The order of steps in the update procedures is crucial. Please review
 the procedures in advance, and follow the instructions carefully.
@@ -58,7 +59,8 @@ the procedures in advance, and follow the instructions carefully.
 To update Service Impact to this release from a previous release of
 5.4.x, follow the standard update procedure:
 
-[Updating Service Impact](/imp/install/installation-procedures.html)
+[Updating Service Impact](/imp/install/upgrade/54x/procedure.html)
+
 
 When the update is complete, run the following command to synchronize
 `impact-server`:
@@ -104,5 +106,3 @@ IMP-694</td>
 </tr>
 </tbody>
 </table>
-
-

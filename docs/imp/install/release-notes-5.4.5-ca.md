@@ -36,7 +36,7 @@ Additional highlights of this release:
 ## Compatibility
 
 For version information, please see the compatibility matrix on the
-[Release Notes](/not-migrated.html)
+[Release Notes](/imp/install/release-notes.html)
 page.
 
 ## Update instructions
@@ -72,7 +72,7 @@ the procedures in advance, and follow the instructions carefully.
     process, you may receive a message similar to the following:
 
     ```sh
-    WARNING zen.ImpactGraph: Exception while adding impact batch:'NoneType' object has no attribute '__module__', number tried: 9 (a retry number > 5) 
+    WARNING zen.ImpactGraph: Exception while adding impact batch:'NoneType' object has no attribute '__module__', number tried: 9 (a retry number > 5)
     ```
 
     Repeat the `zenimpactgraph run -x catclean` and retry the
@@ -246,5 +246,3 @@ IMP-657</td>
 </tr>
 </tbody>
 </table>
-
-

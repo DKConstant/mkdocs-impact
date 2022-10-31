@@ -14,7 +14,7 @@ providers with the DynamicView ZenPack.
 ## Compatibility
 
 For version information, please see the compatibility matrix on the
-[Release Notes](/not-migrated.html)
+[Release Notes](/imp/install/release-notes.html)
 page.
 
 ## Update instructions
@@ -51,13 +51,13 @@ Both update paths start at [the same page](/imp/install/installation-procedures.
     `ModelCatalogError: Exception performing search`. The
     workaround is to re-run the update.
 -   After installing one or more ZenPacks that have updated relationship
-    providers, rebuild the graph. For more information, see [Rebuilding the graph database during 5.4.x upgrades](/imp/install/graph-rebuild-5.4.html).
+    providers, rebuild the graph. For more information, see
+    [Rebuilding the graph database during 5.5.x upgrades](/imp/install/upgrade/55x/graph-rebuild-5.5.html).
 
 ## Fixed issues
 
-|         |                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------|
 | ID      | Description                                                                                                                |
+|---------|----------------------------------------------------------------------------------------------------------------------------|
 | IMP-124 | Exporting an empty dynamic service organizer results in a traceback.                                                       |
 | IMP-405 | When debug logging is enabled, the log files consume all available space within 10 minutes and crash the Impact container. |
 | IMP-412 | Impact diagrams show the wrong content in the icon type field.                                                             |
@@ -75,5 +75,3 @@ Both update paths start at [the same page](/imp/install/installation-procedures.
 | IMP-731 | Relationships among Cisco UCS devices are missing (Impact 5.4.x installed).                                                |
 | IMP-734 | Model change events that do not affect any dynamic services are being sent to Impact for processing.                       |
 | IMP-740 | Graph update consumes more memory until memory is exhausted and the container crashes.                                     |
-
-
